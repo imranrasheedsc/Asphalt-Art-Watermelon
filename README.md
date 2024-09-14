@@ -1,17 +1,5 @@
 # Unit 1 - Asphalt Art (Watermelon)
-Unit 1 APCSA project. I made a watermelon
-
-## Introduction
-
-Cities use asphalt art to improve public safety, inspire their residents and visitors, and brighten communities. Your goal is to create asphalt art to revitalize The Neighborhood and bring the community together with the help of the Painter.
-
-## Requirements
-
-Use your knowledge of object-oriented programming, algorithms, the problem solving process, and decomposition strategies to create asphalt art:
-- **Create a new subclass** – Create at least one new subclass of the PainterPlus class that is used for a component of the asphalt art design.
-- **Plan an algorithm** – Use the problem solving process and decomposition strategies to plan an algorithm that incorporates a combination of sequencing, selection, and/or iteration.
-- **Write a method** – Write at least one method in a PainterPlus subclass that contributes to a component of the asphalt art design.
-- **Document your code** – Use comments to explain the purpose of the methods and code segments.
+Unit 1 APCSA project
 
 ## Notes: Neighborhood & Painter Class
 
@@ -25,12 +13,13 @@ This project was created on Code.org's JavaLab platform using the built in Neigh
 
 1. Describe your project.
 
-   - Write your response here...
+   - My project makes a pixel art of a watermelon on a 16x16 grid and paints it on a light blue background. It kind of looks like the minecraft watermelon, but it is less detailed. 
 
 2. What are two things about your project that you are proud of?
 
-   - Write your response here...
+   - I am proud of the final result of the project
+   - I am proud I made methods that could shorten down the code and make the code more efficient.
 
 3. Describe something you would improve or do differently if you had an opportunity to change something about your project.
 
-   - Write your response here...
+   - I would definetly make my code even more efficient. I could have made more methods that could have shortened the code even more, which I will definetly try to do better next time.
