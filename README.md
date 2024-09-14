@@ -7,7 +7,7 @@ This project was created on Code.org's JavaLab platform using the built in Neigh
 
 ## Output:
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9H7W1mde7lrxuqoJRM076ToIa3-B7Q1MsrA&amp;s" alt="Pixel Art Fruit | 16x16 Pixel Art"/>
+![image](https://github.com/user-attachments/assets/7c5b3892-b8bb-495d-8ee7-aefb2a6325b2)
 
 ## Reflection
 
