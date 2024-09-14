@@ -1,24 +1,9 @@
 import org.code.neighborhood.*;
 
 public class WatermelonPainter extends MuralPainter {
-  public void moveSpaces(int length) {
-    for (int i = 0; i < length; i++) {
-      move();
-    }
-  }
 
-
-  public void paintThenMove(String color, int length, String type) {
-    for (int i = 0; i < length; i++) {
-      if (type == "a") {
-        paint(color);
-        move();
-      } else if (type == "b") {
-        move();
-        paint(color);
-      }
-    }
-  }
+  // Not my function, I modified the code to include the direction parameter which changes the direction based on the argument passed. 
+  // Ex. "up" turns the player Right first and then left, "down" turns the player left and then right.
 
   public void paintDiagonalSegment(String color, String direction){
     paint(color);
@@ -43,7 +28,10 @@ public class WatermelonPainter extends MuralPainter {
     }
   }
   
+  // Main function that initalizes all the functions and puts them in the correct order
+
   public void paintWatermelon() {
+    // Arguments here specify the amount of paint required to paint that certain part of the watermelon 
     paintShell(47);
     paintWhite(23);
     paintMelon(50);
@@ -51,8 +39,10 @@ public class WatermelonPainter extends MuralPainter {
     resetPosition();
   }
 
+  // Paints the green & darkgreen parts of the watermelon shell.
+
   public void paintShell(int paintRequired) {
-    setPaint(paintRequired);
+    setPaint(paintRequired); // adds the amount of paint passed to the painters bucket
     moveFast();
     turnRight();
     move();
@@ -62,7 +52,7 @@ public class WatermelonPainter extends MuralPainter {
     move();
     turnLeft();
     moveSpaces(10);
-    paintThenMove("green",1,"a");
+    paintMove("green",1,"a");
     paint("darkgreen");
     turnRight();
     move();
@@ -77,15 +67,15 @@ public class WatermelonPainter extends MuralPainter {
     move();
     paint("darkgreen");
     turnRight();
-    paintThenMove("darkgreen",5,"a");
+    paintMove("darkgreen",5,"a");
     turnRight();
     move();
     turnRight();
     move();
-    paintThenMove("green",5,"a");
+    paintMove("green",5,"a");
     turnAround();
     moveSpaces(5);
-    paintThenMove("darkgreen",2,"b");
+    paintMove("darkgreen",2,"b");
     turnRight();
     move();
     paint("darkgreen");
@@ -104,7 +94,7 @@ public class WatermelonPainter extends MuralPainter {
     turnLeft();
     move();
     turnRight();
-    paintThenMove("darkgreen",6,"b");
+    paintMove("darkgreen",6,"b");
     paintDiagonalSegment("darkgreen","up");
     paintDiagonalSegment("darkgreen","up");
     turnRight();
@@ -116,21 +106,23 @@ public class WatermelonPainter extends MuralPainter {
     move();
     paintDiagonalSegment("green","down");
     turnLeft();
-    paintThenMove("green",5,"b");
+    paintMove("green",5,"b");
     turnLeft();
     paintDiagonalSegment("green","up");
     paintDiagonalSegment("green","up");
     paintDiagonalSegment("green","up");
   }
 
+  // Paints the white part of the watermelon shell.
+
   public void paintWhite(int paintRequired) {
-    setPaint(paintRequired);
+    setPaint(paintRequired); // adds the amount of paint passed to the painters bucket
     moveSpaces(6);
     turnLeft();
     move();
     turnLeft();
     paintDiagonalSegment("white","down");
-    paintThenMove("white",4,"b");
+    paintMove("white",4,"b");
     turnRight();
     move();
     turnLeft();
@@ -138,7 +130,7 @@ public class WatermelonPainter extends MuralPainter {
     turnRight();
     paintDiagonalSegment("white","down");
     paintDiagonalSegment("white","down");
-    paintThenMove("white",4,"b");
+    paintMove("white",4,"b");
     move();
     paintDiagonalSegment("white", "up");
     turnAround();
@@ -155,14 +147,19 @@ public class WatermelonPainter extends MuralPainter {
     move();
   }
   
+  // Paints the melon part of the watermelon, which is predominately red.
+
   public void paintMelon(int paintRequired) {
-    setPaint(paintRequired);
+    setPaint(paintRequired); // adds the amount of paint passed to the painters bucket
+
+    // Paints diagonal segments with the color red downwards
     paintDiagonalSegment("red","down");
     paintDiagonalSegment("red","down");
     paintDiagonalSegment("red","down");
     paintDiagonalSegment("red","down");
     paintDiagonalSegment("red","down");
     paintDiagonalSegment("red","down");
+
     move();
     turnAround();
     move();
@@ -171,12 +168,12 @@ public class WatermelonPainter extends MuralPainter {
     paint("black");
     move();
     turnLeft();
-    paintThenMove("red",4,"a");
+    paintMove("red",4,"a");
     turnLeft();
     move();
     paintDiagonalSegment("red","up");
     paintDiagonalSegment("red","up");
-    paintThenMove("red",2,"b");
+    paintMove("red",2,"b");
     turnLeft();
     move();
     paint("black");
@@ -185,14 +182,14 @@ public class WatermelonPainter extends MuralPainter {
     paint("red");
     turnAround();
     move();
-    paintThenMove("red",2,"b");
+    paintMove("red",2,"b");
     turnRight();
     move();
     turnLeft();
     move();
     turnRight();
     paintDiagonalSegment("red","down");
-    paintThenMove("red",2,"b");
+    paintMove("red",2,"b");
     turnRight();
     move();
     paint("red");
@@ -203,11 +200,11 @@ public class WatermelonPainter extends MuralPainter {
     turnLeft();
     paintDiagonalSegment("red","up");
     paint("black");
-    paintThenMove("red",2,"b");
+    paintMove("red",2,"b");
     turnLeft();
     move();
     turnLeft();
-    paintThenMove("red",2,"b");
+    paintMove("red",2,"b");
     turnRight();
     move();
     paint("red");
