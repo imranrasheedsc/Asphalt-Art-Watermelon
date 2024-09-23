@@ -1,4 +1,3 @@
-// NOT MY CODE, from code.org https://studio.code.org/projects/javalab/chlNldUpp83nkBtqHMOIywMnvHEalYnjr3CYsiHl8_g
 import org.code.neighborhood.*;
 
 import org.code.neighborhood.*;
@@ -8,11 +7,30 @@ import org.code.neighborhood.*;
  * murals in The Neighborhood
  */
 public class MuralPainter extends PainterPlus {
-
+  
   /*
    * Paints each row of The Neighborhood with the color
    * where size is the size of the grid
    */
+  
+ /*
+  * Moves and paints a color that is passed to the function, runs the for loop for length amount of times 
+  * If the type specified is "a", it will make the painter paint first and then move, but 
+  * if the type specified is "b" it will make the painter move and then paint.
+  */
+    public void paintMove(String color, int length, String type) {
+      // for loop.
+      for (int i = 0; i < length; i++) {
+        if (type == "a") {
+          paint(color);
+          move();
+        } else if (type == "b") {
+          move();
+          paint(color);
+        }
+      }
+    }
+  
   public void paintBackground(String color, int size) {
     while (canMove("south")) {
       paintLine(color, size);
