@@ -2,8 +2,21 @@ import org.code.neighborhood.*;
 
 public class WatermelonPainter extends MuralPainter {
 
-  // Not my function, I modified the code to include the direction parameter which changes the direction based on the argument passed. 
-  // Ex. "up" turns the player Right first and then left, "down" turns the player left and then right.
+  // runs a for loop to run the move() function length amount of times while the painter is able to move
+  public void moveSpaces(int length) {
+      // for loop
+    for (int i = 0; i < length; i++) {
+      if (canMove()) {
+         move();
+       }
+    }
+  }
+  
+  /*
+   * Not my method, I modified the code to include the direction parameter 
+   * which changes the direction based on the argument passed. 
+   * Ex. "up" turns the player Right first and then left, "down" turns the player left and then right.
+  */
 
   public void paintDiagonalSegment(String color, String direction){
     paint(color);
